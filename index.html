@@ -64,7 +64,7 @@
             <div class="d-flex align-items-center gap-2 gap-md-3">
                 <div class="search-box position-relative d-none d-md-block">
                     <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                    <input type="text" class="form-control search-input" placeholder="ស្វែងរកទំនិញ..." aria-label="ស្វែងរកទំនិញ">
+                    <input type="text" id="headerSearchInput" class="form-control search-input" placeholder="ស្វែងរកទំនិញ..." aria-label="ស្វែងរកទំនិញ">
                 </div>
 
                 <a href="#wishlist" class="nav-action-btn" title="បញ្ជីចង់បាន">
@@ -76,9 +76,11 @@
                     <span class="badge rounded-pill bg-danger cart-badge">2</span>
                 </a>
 
-                <a href="#profile" class="user-avatar-btn ms-1" title="គណនីរបស់ខ្ញុំ">
-                    <img src="assets/image/avatar_pouly.png" alt="គណនី Pouly" class="user-avatar rounded-circle">
-                </a>
+                <div id="navUserArea" class="d-inline-flex align-items-center">
+                    <a href="login.html" id="navLoginBtn" class="nav-auth-btn ms-1" title="ចូលគណនី">
+                        <i class="fa-regular fa-user"></i> ចូលគណនី
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
@@ -776,13 +778,116 @@
             <span class="badge rounded-pill bg-danger cart-badge" style="top:-3px; right:3px;">2</span>
             <span>កន្ត្រក</span>
         </a>
-        <a href="#profile" class="mobile-nav-link">
+        <a href="login.html" id="mobileAccountLink" class="mobile-nav-link">
             <i class="fa-regular fa-user"></i>
-            <span>គណនី</span>
+            <span id="mobileAccountText">គណនី</span>
         </a>
     </div>
 
+    <div class="modal fade product-modal" id="loginRequiredModal" tabindex="-1" aria-labelledby="loginRequiredModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center p-4">
+                <div class="mb-3">
+                    <span style="display:inline-flex;width:64px;height:64px;border-radius:50%;background:rgba(30,42,64,0.1);align-items:center;justify-content:center;color:var(--primary-midnight);font-size:1.8rem;">
+                        <i class="fa-solid fa-lock"></i>
+                    </span>
+                </div>
+                <h4 class="modal-title mb-2" id="loginRequiredModalLabel">សូមចូលគណនីជាមុនសិន</h4>
+                <p class="text-muted small mb-4">
+                    លោកអ្នកត្រូវតែចូលគណនី ឬចុះឈ្មោះជាសមាជិកថ្មីជាមុនសិន ទើបអាចស្វែងរកគ្រឿងអលង្ការ និងមើលតម្លៃពិសេសក្នុងគេហទំព័ររបស់យើងបាន។
+                </p>
+                <div class="d-grid gap-2">
+                    <a href="login.html?redirect=search" class="btn btn-auth-primary py-2">
+                        <i class="fa-solid fa-right-to-bracket me-2"></i> ចូលគណនីឥឡូវនេះ
+                    </a>
+                    <a href="login.html?redirect=search&mode=register" class="btn btn-outline-dark py-2">
+                        <i class="fa-solid fa-user-plus me-2"></i> ចុះឈ្មោះជាសមាជិកថ្មី
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="assets/css/bootstrap/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function checkAuthStatus() {
+            const userJson = localStorage.getItem('dlk_user');
+            const navUserArea = document.getElementById('navUserArea');
+            const mobileAccountText = document.getElementById('mobileAccountText');
+            const mobileAccountLink = document.getElementById('mobileAccountLink');
+
+            if (userJson) {
+                try {
+                    const user = JSON.parse(userJson);
+                    if (user && user.isLoggedIn) {
+                        if (navUserArea) {
+                            navUserArea.innerHTML = `
+                                <div class="dropdown">
+                                    <a class="user-avatar-btn dropdown-toggle d-flex align-items-center gap-2 text-decoration-none text-light ms-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <img src="assets/image/avatar_pouly.png" alt="${user.name}" class="user-avatar rounded-circle">
+                                        <span class="d-none d-xl-inline small">${user.name}</span>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+                                        <li><span class="dropdown-item-text text-white-50 small">ចូលដោយ៖ <strong>${user.name}</strong></span></li>
+                                        <li><hr class="dropdown-divider border-secondary"></li>
+                                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="logoutUser()"><i class="fa-solid fa-right-from-bracket me-2"></i>ចេញពីគណនី</a></li>
+                                    </ul>
+                                </div>
+                            `;
+                        }
+                        if (mobileAccountText) {
+                            mobileAccountText.textContent = user.name || 'គណនី';
+                        }
+                        if (mobileAccountLink) {
+                            mobileAccountLink.href = 'javascript:void(0)';
+                            mobileAccountLink.onclick = function() {
+                                if (confirm('តើអ្នកចង់ចេញពីគណនី (' + user.name + ') មែនទេ?')) {
+                                    logoutUser();
+                                }
+                            };
+                        }
+                        return true;
+                    }
+                } catch(e) {}
+            }
+            return false;
+        }
+
+        function logoutUser() {
+            localStorage.removeItem('dlk_user');
+            window.location.reload();
+        }
+
+        function setupSearchProtection() {
+            const searchInput = document.getElementById('headerSearchInput');
+            if (!searchInput) return;
+
+            searchInput.addEventListener('focus', function(e) {
+                const isLoggedIn = checkAuthStatus();
+                if (!isLoggedIn) {
+                    searchInput.blur();
+                    const loginModal = new bootstrap.Modal(document.getElementById('loginRequiredModal'));
+                    loginModal.show();
+                }
+            });
+
+            searchInput.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') {
+                    const isLoggedIn = checkAuthStatus();
+                    if (!isLoggedIn) {
+                        e.preventDefault();
+                        const loginModal = new bootstrap.Modal(document.getElementById('loginRequiredModal'));
+                        loginModal.show();
+                    }
+                }
+            });
+        }
+
+        window.addEventListener('DOMContentLoaded', function() {
+            checkAuthStatus();
+            setupSearchProtection();
+        });
+    </script>
 </body>
 
 </html>

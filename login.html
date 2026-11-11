@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="km">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ចូលគណនី / ចុះឈ្មោះ - DLK Accessories</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/bootstrap/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="auth-page">
+        <div class="auth-container">
+            <div class="mb-3 d-flex justify-content-between align-items-center">
+                <a href="index.html" class="text-decoration-none text-muted small d-inline-flex align-items-center gap-2">
+                    <i class="fa-solid fa-arrow-left"></i> ត្រឡប់ទៅកាន់ទំព័រដើមវិញ
+                </a>
+                <span class="badge bg-light text-dark border px-3 py-1 small rounded-pill">
+                    <i class="fa-solid fa-shield-halved text-success me-1"></i> ប្រព័ន្ធសុវត្ថិភាពខ្ពស់
+                </span>
+            </div>
+
+            <div class="auth-card">
+                <div class="row g-0">
+                    <div class="col-lg-5 d-none d-lg-block">
+                        <div class="auth-sidebar">
+                            <div>
+                                <a class="brand-wrapper mb-4" href="index.html">
+                                    <span class="brand-title">DLK<span class="brand-sparkle">✦</span></span>
+                                    <span class="brand-subtitle">ACCESSORIES</span>
+                                </a>
+                                <h3 class="font-serif mt-4 text-white">ភាពស្រស់ស្អាត និងប្រណិតក្នុងគ្រប់លម្អិត</h3>
+                                <p class="small text-white-50 mt-3">
+                                    សូមចូលគណនី ឬបង្កើតគណនីសមាជិកថ្មី ដើម្បីស្វែងរក និងបញ្ជាទិញគ្រឿងអលង្ការប្រណិតផ្តាច់មុខរបស់យើង។
+                                </p>
+                            </div>
+
+                            <div class="my-4">
+                                <div class="d-flex align-items-center gap-3 mb-3">
+                                    <div class="trust-icon" style="color: var(--primary-silver-blue);">
+                                        <i class="fa-solid fa-user-check"></i>
+                                    </div>
+                                    <div class="small">
+                                        <div class="fw-semibold text-white">បង្កើតគណនីផ្ទាល់ខ្លួន</div>
+                                        <div class="text-white-50">ព័ត៌មានផ្ទាល់ខ្លួន • ទំនាក់ទំនង • សុវត្ថិភាព</div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center gap-3 mb-3">
+                                    <div class="trust-icon" style="color: var(--primary-silver-blue);">
+                                        <i class="fa-solid fa-gift"></i>
+                                    </div>
+                                    <div class="small">
+                                        <div class="fw-semibold text-white">ការបញ្ចុះតម្លៃ ២០%</div>
+                                        <div class="text-white-50">សម្រាប់ការបញ្ជាទិញលើកដំបូង</div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="trust-icon" style="color: var(--primary-silver-blue);">
+                                        <i class="fa-solid fa-key"></i>
+                                    </div>
+                                    <div class="small">
+                                        <div class="fw-semibold text-white">ភ្លេចពាក្យសម្ងាត់?</div>
+                                        <div class="text-white-50">អាចកំណត់ឡើងវិញបានយ៉ាងរហ័សតាម OTP</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="small text-white-50 border-top border-secondary pt-3">
+                                &copy; 2026 DLK Accessories. ប្រព័ន្ធគ្រប់គ្រងស្តុក & E-Commerce.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7">
+                        <div class="auth-form-wrapper">
+                            <div class="text-center d-lg-none mb-4">
+                                <a class="brand-wrapper" href="index.html">
+                                    <span class="brand-title text-dark">DLK<span class="brand-sparkle text-primary">✦</span></span>
+                                    <span class="brand-subtitle text-muted">ACCESSORIES</span>
+                                </a>
+                            </div>
+
+                            <div id="redirectNotice" class="alert alert-info py-2 px-3 small d-none mb-3" role="alert">
+                                <i class="fa-solid fa-circle-info me-1"></i> សូមចូលគណនី ឬចុះឈ្មោះជាមុនសិន ដើម្បីស្វែងរកគ្រឿងអលង្ការក្នុងគេហទំព័រ!
+                            </div>
+
+                            <div id="authAlert" class="alert d-none py-2 px-3 small mb-3" role="alert"></div>
+
+                            <div id="mainAuthNav" class="mb-4">
+                                <ul class="nav auth-nav-pills" role="tablist">
+                                    <li class="nav-item flex-fill" role="presentation">
+                                        <button class="nav-link active" id="tabBtnLogin" type="button" onclick="switchToMode('login')">
+                                            <i class="fa-solid fa-right-to-bracket me-1"></i> ចូលគណនី
+                                        </button>
+                                    </li>
+                                    <li class="nav-item flex-fill" role="presentation">
+                                        <button class="nav-link" id="tabBtnRegister" type="button" onclick="switchToMode('register')">
+                                            <i class="fa-solid fa-user-plus me-1"></i> ចុះឈ្មោះថ្មី
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div id="panelLogin" class="auth-panel">
+                                <form id="loginForm" onsubmit="handleLogin(event)">
+                                    <div class="mb-3">
+                                        <label class="auth-form-label" for="loginEmail">អ៊ីមែល ឬ លេខទូរស័ព្ទ</label>
+                                        <input type="text" class="form-control auth-form-control" id="loginEmail" placeholder="ឈ្មោះ ឬ អ៊ីមែល" required>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <div class="d-flex justify-content-between align-items-center mb-1">
+                                            <label class="auth-form-label mb-0" for="loginPassword">ពាក្យសម្ងាត់</label>
+                                            <a href="javascript:void(0)" onclick="switchToMode('forgot')" class="small text-decoration-none fw-semibold" style="color: var(--primary-deep-navy);">ភ្លេចពាក្យសម្ងាត់?</a>
+                                        </div>
+                                        <div class="input-group-password">
+                                            <input type="password" class="form-control auth-form-control" id="loginPassword" placeholder="បញ្ចូលពាក្យសម្ងាត់" required>
+                                            <button type="button" class="btn-password-toggle" onclick="togglePasswordVisibility('loginPassword', this)">
+                                                <i class="fa-regular fa-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input" id="rememberMe">
+                                        <label class="form-check-label small text-muted" for="rememberMe">ចងចាំខ្ញុំលើឧបករណ៍នេះ</label>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-auth-primary mb-3">
+                                        <i class="fa-solid fa-arrow-right-to-bracket me-2"></i> ចូលគណនី
+                                    </button>
+
+                                    <div class="text-center small text-muted mb-3">
+                                        មិនទាន់មានគណនីមែនទេ? <a href="javascript:void(0)" onclick="switchToMode('register')" class="fw-semibold text-decoration-none" style="color: var(--primary-midnight);">ចុះឈ្មោះឥឡូវនេះ</a>
+                                    </div>
+
+                                    <div class="auth-divider">ឬចូលប្រើជាមួយ</div>
+
+                                    <div class="row g-2">
+                                        <div class="col-6">
+                                            <button type="button" class="btn-social-login" onclick="socialLogin('Google')">
+                                                <i class="fa-brands fa-google text-danger"></i> Google
+                                            </button>
+                                        </div>
+                                        <div class="col-6">
+                                            <button type="button" class="btn-social-login" onclick="socialLogin('Facebook')">
+                                                <i class="fa-brands fa-facebook-f text-primary"></i> Facebook
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div id="panelRegister" class="auth-panel d-none">
+                                <div class="stepper-container">
+                                    <div class="stepper-step active" id="regStepIndicator1">
+                                        <div class="step-circle">1</div>
+                                        <span class="step-title">ព័ត៌មានផ្ទាល់ខ្លួន</span>
+                                    </div>
+                                    <div class="stepper-step" id="regStepIndicator2">
+                                        <div class="step-circle">2</div>
+                                        <span class="step-title">ទំនាក់ទំនង</span>
+                                    </div>
+                                    <div class="stepper-step" id="regStepIndicator3">
+                                        <div class="step-circle">3</div>
+                                        <span class="step-title">សុវត្ថិភាព</span>
+                                    </div>
+                                </div>
+
+                                <div id="regStep1" class="step-pane active">
+                                    <div class="mb-3">
+                                        <label class="auth-form-label" for="regFullName">ឈ្មោះពេញ <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control auth-form-control" id="regFullName" placeholder="ឧ. ចាន់ សុភាព" required>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="auth-form-label" for="regUsername">ឈ្មោះអ្នកប្រើប្រាស់ (Username) <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control auth-form-control" id="regUsername" placeholder="ឧ. sopheap_dlk" required>
+                                    </div>
+
+                                    <div class="row g-2 mb-3">
+                                        <div class="col-6">
+                                            <label class="auth-form-label" for="regGender">ភេទ</label>
+                                            <select class="form-select auth-form-control" id="regGender">
+                                                <option value="ស្រី">ស្រី</option>
+                                                <option value="ប្រុស">ប្រុស</option>
+                                                <option value="ផ្សេងៗ">ផ្សេងៗ</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-6">
+                                            <label class="auth-form-label" for="regDob">ថ្ងៃខែឆ្នាំកំណើត</label>
+                                            <input type="date" class="form-control auth-form-control" id="regDob">
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex justify-content-between align-items-center mt-4">
+                                        <button type="button" class="btn btn-step-prev" onclick="switchToMode('login')">
+                                            <i class="fa-solid fa-arrow-left me-1"></i> ចូលគណនី
+                                        </button>
+                                        <button type="button" class="btn btn-step-next" onclick="goToRegisterStep(2)">
+                                            បន្ទាប់ <i class="fa-solid fa-arrow-right ms-1"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div id="regStep2" class="step-pane">
+                                    <div class="mb-3">
+                                        <label class="auth-form-label" for="regEmail">អាសយដ្ឋានអ៊ីមែល <span class="text-danger">*</span></label>
+                                        <input type="email" class="form-control auth-form-control" id="regEmail" placeholder="sopheap@example.com" required>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="auth-form-label" for="regPhone">លេខទូរស័ព្ទ <span class="text-danger">*</span></label>
+                                        <input type="tel" class="form-control auth-form-control" id="regPhone" placeholder="012 345 678" required>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="auth-form-label" for="regCity">រាជធានី / ខេត្ត</label>
+                                        <select class="form-select auth-form-control" id="regCity">
+                                            <option value="រាជធានីភ្នំពេញ">រាជធានីភ្នំពេញ</option>
+                                            <option value="ខេត្តសៀមរាប">ខេត្តសៀមរាប</option>
+                                            <option value="ខេត្តបាត់ដំបង">ខេត្តបាត់ដំបង</option>
+                                            <option value="ខេត្តព្រះសីហនុ">ខេត្តព្រះសីហនុ</option>
+                                            <option value="ខេត្តកំពត">ខេត្តកំពត</option>
+                                            <option value="ខេត្តផ្សេងៗ">ខេត្តផ្សេងៗ</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="d-flex justify-content-between align-items-center mt-4">
+                                        <button type="button" class="btn btn-step-prev" onclick="goToRegisterStep(1)">
+                                            <i class="fa-solid fa-arrow-left me-1"></i> ថយក្រោយ
+                                        </button>
+                                        <button type="button" class="btn btn-step-next" onclick="goToRegisterStep(3)">
+                                            បន្ទាប់ <i class="fa-solid fa-arrow-right ms-1"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div id="regStep3" class="step-pane">
+                                    <div class="mb-3">
+                                        <label class="auth-form-label" for="regPassword">បង្កើតពាក្យសម្ងាត់ <span class="text-danger">*</span></label>
+                                        <div class="input-group-password">
+                                            <input type="password" class="form-control auth-form-control" id="regPassword" placeholder="យ៉ាងតិច ៦ ខ្ទង់" required minlength="6">
+                                            <button type="button" class="btn-password-toggle" onclick="togglePasswordVisibility('regPassword', this)">
+                                                <i class="fa-regular fa-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="auth-form-label" for="regConfirmPassword">បញ្ជាក់ពាក្យសម្ងាត់ <span class="text-danger">*</span></label>
+                                        <div class="input-group-password">
+                                            <input type="password" class="form-control auth-form-control" id="regConfirmPassword" placeholder="បញ្ចូលពាក្យសម្ងាត់ម្តងទៀត" required minlength="6">
+                                            <button type="button" class="btn-password-toggle" onclick="togglePasswordVisibility('regConfirmPassword', this)">
+                                                <i class="fa-regular fa-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input" id="termsAgree" required checked>
+                                        <label class="form-check-label small text-muted" for="termsAgree">
+                                            ខ្ញុំយល់ព្រមតាម <a href="javascript:void(0)" class="text-decoration-none">លក្ខខណ្ឌប្រើប្រាស់</a> និង <a href="javascript:void(0)" class="text-decoration-none">គោលការណ៍ឯកជនភាព</a>
+                                        </label>
+                                    </div>
+
+                                    <div class="d-flex justify-content-between align-items-center mt-4">
+                                        <button type="button" class="btn btn-step-prev" onclick="goToRegisterStep(2)">
+                                            <i class="fa-solid fa-arrow-left me-1"></i> ថយក្រោយ
+                                        </button>
+                                        <button type="button" class="btn btn-auth-primary" style="width: auto; padding: 0.65rem 1.5rem;" onclick="submitCompleteRegistration()">
+                                            <i class="fa-solid fa-check me-1"></i> បញ្ចប់ការចុះឈ្មោះ & ចូលគណនី
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="panelForgot" class="auth-panel d-none">
+                                <div class="d-flex align-items-center justify-content-between mb-3 border-bottom pb-2">
+                                    <h5 class="mb-0 font-serif text-dark">
+                                        <i class="fa-solid fa-key me-2 text-warning"></i> កំណត់ពាក្យសម្ងាត់ឡើងវិញ
+                                    </h5>
+                                    <button type="button" class="btn btn-sm text-muted" onclick="switchToMode('login')">
+                                        <i class="fa-solid fa-xmark fs-6"></i>
+                                    </button>
+                                </div>
+
+                                <div class="stepper-container">
+                                    <div class="stepper-step active" id="forgotStepIndicator1">
+                                        <div class="step-circle">1</div>
+                                        <span class="step-title">ផ្ញើ OTP</span>
+                                    </div>
+                                    <div class="stepper-step" id="forgotStepIndicator2">
+                                        <div class="step-circle">2</div>
+                                        <span class="step-title">ផ្ទៀងផ្ទាត់</span>
+                                    </div>
+                                    <div class="stepper-step" id="forgotStepIndicator3">
+                                        <div class="step-circle">3</div>
+                                        <span class="step-title">ពាក្យសម្ងាត់ថ្មី</span>
+                                    </div>
+                                </div>
+
+                                <div id="forgotStep1" class="step-pane active">
+                                    <p class="small text-muted mb-3">
+                                        សូមបញ្ចូលអាសយដ្ឋានអ៊ីមែល ឬលេខទូរស័ព្ទដែលបានចុះឈ្មោះ។ យើងនឹងផ្ញើលេខកូដសម្ងាត់ ៦ ខ្ទង់ (OTP) ទៅកាន់អ្នក។
+                                    </p>
+                                    <div class="mb-3">
+                                        <label class="auth-form-label" for="forgotIdentifier">អ៊ីមែល ឬ លេខទូរស័ព្ទ</label>
+                                        <input type="text" class="form-control auth-form-control" id="forgotIdentifier" placeholder="ឧ. name@example.com ឬ 012345678" required>
+                                    </div>
+
+                                    <div class="d-flex justify-content-between align-items-center mt-4">
+                                        <button type="button" class="btn btn-step-prev" onclick="switchToMode('login')">
+                                            ត្រឡប់ទៅចូលគណនី
+                                        </button>
+                                        <button type="button" class="btn btn-step-next" onclick="sendOtpCode()">
+                                            ផ្ញើលេខកូដ OTP <i class="fa-solid fa-arrow-right ms-1"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div id="forgotStep2" class="step-pane">
+                                    <p class="small text-muted mb-2 text-center">
+                                        លេខកូដសម្ងាត់ ៦ ខ្ទង់ត្រូវបានផ្ញើជូនហើយ។ សូមបញ្ចូលលេខកូដដើម្បីផ្ទៀងផ្ទាត់ (លេខកូដគំរូ៖ <strong>123456</strong>)៖
+                                    </p>
+                                    <div class="otp-box-wrapper">
+                                        <input type="text" maxlength="1" class="otp-digit-input" onkeyup="handleOtpKey(this, 0)" id="otp0">
+                                        <input type="text" maxlength="1" class="otp-digit-input" onkeyup="handleOtpKey(this, 1)" id="otp1">
+                                        <input type="text" maxlength="1" class="otp-digit-input" onkeyup="handleOtpKey(this, 2)" id="otp2">
+                                        <input type="text" maxlength="1" class="otp-digit-input" onkeyup="handleOtpKey(this, 3)" id="otp3">
+                                        <input type="text" maxlength="1" class="otp-digit-input" onkeyup="handleOtpKey(this, 4)" id="otp4">
+                                        <input type="text" maxlength="1" class="otp-digit-input" onkeyup="handleOtpKey(this, 5)" id="otp5">
+                                    </div>
+
+                                    <div class="text-center small text-muted mb-3">
+                                        មិនទាន់ទទួលបានកូដមែនទេ? <a href="javascript:void(0)" onclick="sendOtpCode()" class="fw-semibold text-decoration-none">ផ្ញើម្តងទៀត</a>
+                                    </div>
+
+                                    <div class="d-flex justify-content-between align-items-center mt-4">
+                                        <button type="button" class="btn btn-step-prev" onclick="goToForgotStep(1)">
+                                            ថយក្រោយ
+                                        </button>
+                                        <button type="button" class="btn btn-step-next" onclick="verifyOtpCode()">
+                                            ផ្ទៀងផ្ទាត់កូដ <i class="fa-solid fa-arrow-right ms-1"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div id="forgotStep3" class="step-pane">
+                                    <p class="small text-muted mb-3">
+                                        ការផ្ទៀងផ្ទាត់ជោគជ័យ! សូមបង្កើតពាក្យសម្ងាត់ថ្មីដែលមានសុវត្ថិភាពខ្ពស់។
+                                    </p>
+                                    <div class="mb-3">
+                                        <label class="auth-form-label" for="newResetPass">ពាក្យសម្ងាត់ថ្មី</label>
+                                        <div class="input-group-password">
+                                            <input type="password" class="form-control auth-form-control" id="newResetPass" placeholder="យ៉ាងតិច ៦ ខ្ទង់" required minlength="6">
+                                            <button type="button" class="btn-password-toggle" onclick="togglePasswordVisibility('newResetPass', this)">
+                                                <i class="fa-regular fa-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="auth-form-label" for="confirmResetPass">បញ្ជាក់ពាក្យសម្ងាត់ថ្មី</label>
+                                        <div class="input-group-password">
+                                            <input type="password" class="form-control auth-form-control" id="confirmResetPass" placeholder="បញ្ចូលពាក្យសម្ងាត់ថ្មីម្តងទៀត" required minlength="6">
+                                            <button type="button" class="btn-password-toggle" onclick="togglePasswordVisibility('confirmResetPass', this)">
+                                                <i class="fa-regular fa-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex justify-content-between align-items-center mt-4">
+                                        <button type="button" class="btn btn-step-prev" onclick="goToForgotStep(2)">
+                                            ថយក្រោយ
+                                        </button>
+                                        <button type="button" class="btn btn-auth-primary" style="width: auto; padding: 0.65rem 1.5rem;" onclick="submitNewPassword()">
+                                            <i class="fa-solid fa-lock me-1"></i> រក្សាទុក & ចូលគណនី
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/css/bootstrap/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function checkUrlParams() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('redirect') === 'search') {
+                const notice = document.getElementById('redirectNotice');
+                if (notice) notice.classList.remove('d-none');
+            }
+            if (urlParams.get('mode') === 'register') {
+                switchToMode('register');
+            } else if (urlParams.get('mode') === 'forgot') {
+                switchToMode('forgot');
+            }
+        }
+
+        function switchToMode(mode) {
+            const panelLogin = document.getElementById('panelLogin');
+            const panelRegister = document.getElementById('panelRegister');
+            const panelForgot = document.getElementById('panelForgot');
+            const mainAuthNav = document.getElementById('mainAuthNav');
+            const tabBtnLogin = document.getElementById('tabBtnLogin');
+            const tabBtnRegister = document.getElementById('tabBtnRegister');
+            const authAlert = document.getElementById('authAlert');
+
+            if (authAlert) authAlert.classList.add('d-none');
+
+            if (mode === 'login') {
+                panelLogin.classList.remove('d-none');
+                panelRegister.classList.add('d-none');
+                panelForgot.classList.add('d-none');
+                mainAuthNav.classList.remove('d-none');
+                tabBtnLogin.classList.add('active');
+                tabBtnRegister.classList.remove('active');
+            } else if (mode === 'register') {
+                panelLogin.classList.add('d-none');
+                panelRegister.classList.remove('d-none');
+                panelForgot.classList.add('d-none');
+                mainAuthNav.classList.remove('d-none');
+                tabBtnLogin.classList.remove('active');
+                tabBtnRegister.classList.add('active');
+                goToRegisterStep(1);
+            } else if (mode === 'forgot') {
+                panelLogin.classList.add('d-none');
+                panelRegister.classList.add('d-none');
+                panelForgot.classList.remove('d-none');
+                mainAuthNav.classList.add('d-none');
+                goToForgotStep(1);
+            }
+        }
+
+        function goToRegisterStep(stepNumber) {
+            if (stepNumber === 2) {
+                const name = document.getElementById('regFullName').value.trim();
+                const username = document.getElementById('regUsername').value.trim();
+                if (!name || !username) {
+                    showAlert('សូមបំពេញឈ្មោះពេញ និងឈ្មោះអ្នកប្រើប្រាស់ជាមុនសិន!', false);
+                    return;
+                }
+            } else if (stepNumber === 3) {
+                const email = document.getElementById('regEmail').value.trim();
+                const phone = document.getElementById('regPhone').value.trim();
+                if (!email || !phone) {
+                    showAlert('សូមបំពេញអ៊ីមែល និងលេខទូរស័ព្ទជាមុនសិន!', false);
+                    return;
+                }
+            }
+
+            hideAlert();
+
+            for (let i = 1; i <= 3; i++) {
+                const pane = document.getElementById('regStep' + i);
+                const indicator = document.getElementById('regStepIndicator' + i);
+                if (pane) pane.classList.remove('active');
+                if (indicator) {
+                    indicator.classList.remove('active', 'completed');
+                    if (i < stepNumber) {
+                        indicator.classList.add('completed');
+                        indicator.querySelector('.step-circle').innerHTML = '<i class="fa-solid fa-check"></i>';
+                    } else if (i === stepNumber) {
+                        indicator.classList.add('active');
+                        indicator.querySelector('.step-circle').textContent = i;
+                    } else {
+                        indicator.querySelector('.step-circle').textContent = i;
+                    }
+                }
+            }
+
+            const currentPane = document.getElementById('regStep' + stepNumber);
+            if (currentPane) currentPane.classList.add('active');
+        }
+
+        function submitCompleteRegistration() {
+            const pass = document.getElementById('regPassword').value;
+            const confirmPass = document.getElementById('regConfirmPassword').value;
+            const terms = document.getElementById('termsAgree').checked;
+
+            if (!pass || pass.length < 6) {
+                showAlert('សូមបង្កើតពាក្យសម្ងាត់យ៉ាងតិច ៦ ខ្ទង់!', false);
+                return;
+            }
+
+            if (pass !== confirmPass) {
+                showAlert('ពាក្យសម្ងាត់ទាំងពីរមិនដូចគ្នាទេ សូមពិនិត្យឡើងវិញ!', false);
+                return;
+            }
+
+            if (!terms) {
+                showAlert('សូមយល់ព្រមលើលក្ខខណ្ឌប្រើប្រាស់ជាមុនសិន!', false);
+                return;
+            }
+
+            const name = document.getElementById('regFullName').value.trim();
+            const username = document.getElementById('regUsername').value.trim();
+            const email = document.getElementById('regEmail').value.trim();
+            const phone = document.getElementById('regPhone').value.trim();
+            const city = document.getElementById('regCity').value;
+
+            const userData = {
+                name: name,
+                username: username,
+                email: email,
+                phone: phone,
+                city: city,
+                isLoggedIn: true,
+                isNewUser: true,
+                registeredTime: new Date().toISOString()
+            };
+
+            localStorage.setItem('dlk_user', JSON.stringify(userData));
+            showAlert('ចុះឈ្មោះគណនីថ្មីជោគជ័យ! កំពុងបញ្ជូនទៅកាន់គណនីរបស់អ្នក...', true);
+
+            setTimeout(function() {
+                const urlParams = new URLSearchParams(window.location.search);
+                if (urlParams.get('redirect') === 'search') {
+                    window.location.href = 'index.html';
+                } else {
+                    window.location.href = 'profile.html';
+                }
+            }, 1000);
+        }
+
+        function goToForgotStep(stepNumber) {
+            hideAlert();
+            for (let i = 1; i <= 3; i++) {
+                const pane = document.getElementById('forgotStep' + i);
+                const indicator = document.getElementById('forgotStepIndicator' + i);
+                if (pane) pane.classList.remove('active');
+                if (indicator) {
+                    indicator.classList.remove('active', 'completed');
+                    if (i < stepNumber) {
+                        indicator.classList.add('completed');
+                        indicator.querySelector('.step-circle').innerHTML = '<i class="fa-solid fa-check"></i>';
+                    } else if (i === stepNumber) {
+                        indicator.classList.add('active');
+                        indicator.querySelector('.step-circle').textContent = i;
+                    } else {
+                        indicator.querySelector('.step-circle').textContent = i;
+                    }
+                }
+            }
+
+            const currentPane = document.getElementById('forgotStep' + stepNumber);
+            if (currentPane) currentPane.classList.add('active');
+        }
+
+        function sendOtpCode() {
+            const identifier = document.getElementById('forgotIdentifier').value.trim();
+            if (!identifier) {
+                showAlert('សូមបញ្ចូលអ៊ីមែល ឬលេខទូរស័ព្ទរបស់អ្នកជាមុនសិន!', false);
+                return;
+            }
+
+            showAlert('លេខកូដសម្ងាត់ OTP ៦ ខ្ទង់ត្រូវបានផ្ញើជូនជោគជ័យ! (កូដគំរូ៖ 123456)', true);
+            goToForgotStep(2);
+            setTimeout(function() {
+                const firstOtp = document.getElementById('otp0');
+                if (firstOtp) firstOtp.focus();
+            }, 200);
+        }
+
+        function handleOtpKey(input, index) {
+            if (input.value.length === 1 && index < 5) {
+                const nextInput = document.getElementById('otp' + (index + 1));
+                if (nextInput) nextInput.focus();
+            }
+        }
+
+        function verifyOtpCode() {
+            let code = '';
+            for (let i = 0; i < 6; i++) {
+                code += document.getElementById('otp' + i).value;
+            }
+
+            if (code.length < 6) {
+                showAlert('សូមបញ្ចូលលេខកូដ OTP ឱ្យគ្រប់ ៦ ខ្ទង់!', false);
+                return;
+            }
+
+            showAlert('ការផ្ទៀងផ្ទាត់កូដ OTP ជោគជ័យ!', true);
+            goToForgotStep(3);
+        }
+
+        function submitNewPassword() {
+            const pass = document.getElementById('newResetPass').value;
+            const confirmPass = document.getElementById('confirmResetPass').value;
+
+            if (!pass || pass.length < 6) {
+                showAlert('សូមបញ្ចូលពាក្យសម្ងាត់ថ្មីយ៉ាងតិច ៦ ខ្ទង់!', false);
+                return;
+            }
+
+            if (pass !== confirmPass) {
+                showAlert('ពាក្យសម្ងាត់ថ្មីទាំងពីរមិនដូចគ្នាទេ!', false);
+                return;
+            }
+
+            const identifier = document.getElementById('forgotIdentifier').value.trim();
+            const userName = identifier.includes('@') ? identifier.split('@')[0] : identifier;
+
+            const userData = {
+                name: userName,
+                email: identifier,
+                isLoggedIn: true,
+                passwordReset: true,
+                loginTime: new Date().toISOString()
+            };
+
+            localStorage.setItem('dlk_user', JSON.stringify(userData));
+            showAlert('ផ្លាស់ប្តូរពាក្យសម្ងាត់ជោគជ័យ! កំពុងបញ្ជូនទៅកាន់គណនីរបស់អ្នក...', true);
+
+            setTimeout(function() {
+                window.location.href = 'profile.html';
+            }, 1000);
+        }
+
+        function togglePasswordVisibility(inputId, btn) {
+            const input = document.getElementById(inputId);
+            const icon = btn.querySelector('i');
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                input.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        }
+
+        function showAlert(msg, isSuccess) {
+            const alertBox = document.getElementById('authAlert');
+            alertBox.className = 'alert py-2 px-3 small mb-3 ' + (isSuccess ? 'alert-success' : 'alert-danger');
+            alertBox.innerHTML = (isSuccess ? '<i class="fa-solid fa-check-circle me-1"></i> ' : '<i class="fa-solid fa-circle-exclamation me-1"></i> ') + msg;
+            alertBox.classList.remove('d-none');
+        }
+
+        function hideAlert() {
+            const alertBox = document.getElementById('authAlert');
+            if (alertBox) alertBox.classList.add('d-none');
+        }
+
+        function handleLogin(e) {
+            e.preventDefault();
+            const email = document.getElementById('loginEmail').value.trim();
+            const pass = document.getElementById('loginPassword').value;
+
+            if (!email || !pass) {
+                showAlert('សូមបំពេញអ៊ីមែល និងពាក្យសម្ងាត់!', false);
+                return;
+            }
+
+            const userName = email.includes('@') ? email.split('@')[0] : email;
+            const userData = {
+                name: userName,
+                email: email,
+                isLoggedIn: true,
+                loginTime: new Date().toISOString()
+            };
+
+            localStorage.setItem('dlk_user', JSON.stringify(userData));
+            showAlert('ចូលគណនីជោគជ័យ! កំពុងបញ្ជូនទៅកាន់គណនីរបស់អ្នក...', true);
+
+            setTimeout(function() {
+                const urlParams = new URLSearchParams(window.location.search);
+                if (urlParams.get('redirect') === 'search') {
+                    window.location.href = 'index.html';
+                } else {
+                    window.location.href = 'profile.html';
+                }
+            }, 1000);
+        }
+
+        function socialLogin(provider) {
+            const userData = {
+                name: provider + ' User',
+                email: 'user@' + provider.toLowerCase() + '.com',
+                isLoggedIn: true,
+                provider: provider
+            };
+            localStorage.setItem('dlk_user', JSON.stringify(userData));
+            showAlert('ចូលគណនីតាមរយៈ ' + provider + ' ជោគជ័យ!', true);
+            setTimeout(function() {
+                window.location.href = 'profile.html';
+            }, 1000);
+        }
+
+        window.addEventListener('DOMContentLoaded', checkUrlParams);
+    </script>
+</body>
+
+</html>
