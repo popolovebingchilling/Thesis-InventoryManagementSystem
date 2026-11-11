@@ -1,26 +1,788 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="km">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-    <!-- HTML CSS -->
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <!-- BOOTSTRAP CSS -->
-    <link rel="stylesheet" href="assets/css/bootstrap/bootstrap-5.3.8-dist/css/bootstrap.css">
-    <!-- BOOTSTRAP THEME  -->
-    <link rel="stylesheet" href="assets/css/theme.css">
-    <!-- FONT AWESOME FOR ICON -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <!-- GOGGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <title>ទំព័រដើម - DLK Accessories</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/bootstrap/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg dlk-navbar">
+        <div class="container-fluid px-lg-5">
+            <button class="navbar-toggler border-0 text-light me-2 d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#dlkNavbarContent" aria-controls="dlkNavbarContent" aria-expanded="false" aria-label="បើកម៉ឺនុយ">
+                <i class="fa-solid fa-bars fs-5"></i>
+            </button>
+
+            <a class="brand-wrapper me-lg-4" href="index.html">
+                <span class="brand-title">DLK<span class="brand-sparkle">✦</span></span>
+                <span class="brand-subtitle">ACCESSORIES</span>
+            </a>
+
+            <div class="collapse navbar-collapse" id="dlkNavbarContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">ទំព័រដើម</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#shop">ទំនិញ</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            ប្រភេទផលិតផល
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="categoriesDropdown">
+                            <li><a class="dropdown-item" href="#necklaces"><i class="fa-solid fa-gem me-2 opacity-75"></i>ខ្សែក</a></li>
+                            <li><a class="dropdown-item" href="#earrings"><i class="fa-solid fa-sparkles me-2 opacity-75"></i>ក្រវិល</a></li>
+                            <li><a class="dropdown-item" href="#rings"><i class="fa-regular fa-circle-dot me-2 opacity-75"></i>ចិញ្ចៀន</a></li>
+                            <li><a class="dropdown-item" href="#bracelets"><i class="fa-solid fa-ring me-2 opacity-75"></i>ខ្សែដៃ</a></li>
+                            <li><a class="dropdown-item" href="#watches"><i class="fa-solid fa-clock me-2 opacity-75"></i>នាឡិកាដៃ</a></li>
+                            <li><a class="dropdown-item" href="#bags"><i class="fa-solid fa-bag-shopping me-2 opacity-75"></i>កាបូប</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">អំពីយើង</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">អត្ថបទ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">ទំនាក់ទំនង</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="d-flex align-items-center gap-2 gap-md-3">
+                <div class="search-box position-relative d-none d-md-block">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" class="form-control search-input" placeholder="ស្វែងរកទំនិញ..." aria-label="ស្វែងរកទំនិញ">
+                </div>
+
+                <a href="#wishlist" class="nav-action-btn" title="បញ្ជីចង់បាន">
+                    <i class="fa-regular fa-heart"></i>
+                </a>
+
+                <a href="#cart" class="nav-action-btn position-relative" title="កន្ត្រកទំនិញ">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="badge rounded-pill bg-danger cart-badge">2</span>
+                </a>
+
+                <a href="#profile" class="user-avatar-btn ms-1" title="គណនីរបស់ខ្ញុំ">
+                    <img src="assets/image/avatar_pouly.png" alt="គណនី Pouly" class="user-avatar rounded-circle">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="hero-bg-layer"></div>
+        <div class="hero-gradient-overlay"></div>
+
+        <div class="container-fluid px-lg-5 position-relative">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-8 col-lg-6">
+                    <div class="hero-content">
+                        <h1 class="hero-title">
+                            <span class="title-italic">ភាពស្រស់ស្អាត</span>
+                            មិនចេះរីងស្ងួត
+                        </h1>
+                        <p class="hero-subtitle">
+                            ស្វែងរកការប្រមូលផ្តុំគ្រឿងអលង្ការ និងគ្រឿងតុបតែងប្រណិតផ្តាច់មុខសម្រាប់អ្នក។
+                        </p>
+                        <a href="#shop" class="hero-btn">
+                            ទិញឥឡូវនេះ <i class="fa-solid fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="#prev" class="hero-arrow hero-arrow-prev d-none d-sm-flex" title="ស្លាយមុន">
+            <i class="fa-solid fa-chevron-left"></i>
+        </a>
+        <a href="#next" class="hero-arrow hero-arrow-next d-none d-sm-flex" title="ស្លាយបន្ទាប់">
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
+
+        <div class="hero-pagination">
+            <span class="hero-dot active"></span>
+            <span class="hero-dot active"></span>
+            <span class="hero-dot"></span>
+            <span class="hero-dot"></span>
+            <span class="hero-dot"></span>
+        </div>
+    </header>
+
+    <section class="trust-badges-bar">
+        <div class="container-fluid px-lg-5">
+            <div class="row g-3 g-md-0 align-items-center">
+                <div class="col-6 col-md-3">
+                    <div class="trust-badge-item">
+                        <div class="trust-icon me-3">
+                            <i class="fa-solid fa-truck-fast"></i>
+                        </div>
+                        <div>
+                            <div class="trust-title">ដឹកជញ្ជូនឥតគិតថ្លៃ</div>
+                            <div class="trust-desc">សម្រាប់ការបញ្ជាទិញលើសពី $50</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="trust-badge-item">
+                        <div class="trust-icon me-3">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <div>
+                            <div class="trust-title">ការទូទាត់ប្រកបដោយសុវត្ថិភាព</div>
+                            <div class="trust-desc">ការពារសុវត្ថិភាព ១០០%</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="trust-badge-item">
+                        <div class="trust-icon me-3">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+                        <div>
+                            <div class="trust-title">សេវាកម្ម ២៤/៧</div>
+                            <div class="trust-desc">ត្រៀមជួយលោកអ្នកជានិច្ច</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="trust-badge-item">
+                        <div class="trust-icon me-3">
+                            <i class="fa-solid fa-gift"></i>
+                        </div>
+                        <div>
+                            <div class="trust-title">ប្តូរទំនិញងាយស្រួល</div>
+                            <div class="trust-desc">ក្នុងរយៈពេល ៧ ថ្ងៃ</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="shop-category-section" id="categories">
+        <div class="container-fluid px-lg-5">
+            <div class="d-flex align-items-center justify-content-between mb-4">
+                <div class="d-none d-md-block" style="width: 80px;"></div>
+                <h2 class="section-title text-center mb-0 mx-auto">ទិញតាមប្រភេទ</h2>
+                <a href="#shop" class="view-all-link">
+                    មើលទាំងអស់ <i class="fa-solid fa-arrow-right ms-1"></i>
+                </a>
+            </div>
+
+            <div class="row g-3 row-cols-2 row-cols-sm-3 row-cols-lg-6 justify-content-center">
+                <div class="col">
+                    <a href="#necklaces" class="category-card-wrapper" title="ស្វែងរកខ្សែក">
+                        <div class="category-card">
+                            <img src="assets/image/card_1_necklaces.png" alt="ប្រភេទខ្សែក" class="img-fluid">
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col">
+                    <a href="#earrings" class="category-card-wrapper" title="ស្វែងរកក្រវិល">
+                        <div class="category-card active">
+                            <img src="assets/image/card_2_earrings.png" alt="ប្រភេទក្រវិល" class="img-fluid">
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col">
+                    <a href="#rings" class="category-card-wrapper" title="ស្វែងរកចិញ្ចៀន">
+                        <div class="category-card">
+                            <img src="assets/image/card_3_rings.png" alt="ប្រភេទចិញ្ចៀន" class="img-fluid">
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col">
+                    <a href="#bracelets" class="category-card-wrapper" title="ស្វែងរកខ្សែដៃ">
+                        <div class="category-card">
+                            <img src="assets/image/card_4_bracelets.png" alt="ប្រភេទខ្សែដៃ" class="img-fluid">
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col">
+                    <a href="#watches" class="category-card-wrapper" title="ស្វែងរកនាឡិកាដៃ">
+                        <div class="category-card">
+                            <img src="assets/image/card_5_watches.png" alt="ប្រភេទនាឡិកាដៃ" class="img-fluid">
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col">
+                    <a href="#bags" class="category-card-wrapper" title="ស្វែងរកកាបូប">
+                        <div class="category-card">
+                            <img src="assets/image/card_6_bags.png" alt="ប្រភេទកាបូប" class="img-fluid">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-products-section" id="shop">
+        <div class="container-fluid px-lg-5">
+            <div class="text-center mb-5">
+                <span class="text-uppercase tracking-wider small text-muted">ជម្រើសពិសេសផ្តាច់មុខ</span>
+                <h2 class="section-title mt-1">ការប្រមូលផ្តុំរបស់យើង</h2>
+                <p class="text-muted small">ស្វែងរកភាពថ្លៃថ្នូរនៅក្នុងគ្រប់គ្រឿងតុបតែង។</p>
+            </div>
+
+            <div class="row g-4 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+                <div class="col">
+                    <div class="product-card">
+                        <div class="product-thumb-container" data-bs-toggle="modal" data-bs-target="#productModal1" title="ចុចដើម្បីមើលព័ត៌មានលម្អិត">
+                            <span class="product-badge">លក់ដាច់បំផុត</span>
+                            <button class="wishlist-btn" title="បញ្ចូលក្នុងបញ្ជីចង់បាន" onclick="event.stopPropagation();"><i class="fa-regular fa-heart"></i></button>
+                            <img src="assets/image/prod_diamond_necklace.png" alt="ខ្សែកពេជ្រ Clover" class="product-thumb-img">
+                            <button class="quickview-btn" data-bs-toggle="modal" data-bs-target="#productModal1" title="មើលព័ត៌មានលម្អិត">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="product-body">
+                            <div class="product-category">ខ្សែក</div>
+                            <h3 class="product-title">
+                                <a href="javascript:void(0)" class="product-title-link" data-bs-toggle="modal" data-bs-target="#productModal1">ខ្សែកពេជ្រ Clover</a>
+                            </h3>
+                            <div class="product-price">$79.99 <span class="old-price">$99.99</span></div>
+                            <div class="d-flex gap-2 mt-auto">
+                                <button class="btn-detail-card" data-bs-toggle="modal" data-bs-target="#productModal1" title="មើលលម្អិត">
+                                    <i class="fa-solid fa-circle-info me-1"></i> លម្អិត
+                                </button>
+                                <button class="btn-add-cart flex-grow-1">
+                                    <i class="fa-solid fa-cart-plus me-1"></i> កន្ត្រក
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="product-card">
+                        <div class="product-thumb-container" data-bs-toggle="modal" data-bs-target="#productModal2" title="ចុចដើម្បីមើលព័ត៌មានលម្អិត">
+                            <span class="product-badge">ទំនិញថ្មី</span>
+                            <button class="wishlist-btn" title="បញ្ចូលក្នុងបញ្ជីចង់បាន" onclick="event.stopPropagation();"><i class="fa-regular fa-heart"></i></button>
+                            <img src="assets/image/prod_elegant_earrings.png" alt="ក្រវិលគុជខ្យងបូប្រណិត" class="product-thumb-img">
+                            <button class="quickview-btn" data-bs-toggle="modal" data-bs-target="#productModal2" title="មើលព័ត៌មានលម្អិត">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="product-body">
+                            <div class="product-category">ក្រវិល</div>
+                            <h3 class="product-title">
+                                <a href="javascript:void(0)" class="product-title-link" data-bs-toggle="modal" data-bs-target="#productModal2">ក្រវិលគុជខ្យងបូប្រណិត</a>
+                            </h3>
+                            <div class="product-price">$49.99</div>
+                            <div class="d-flex gap-2 mt-auto">
+                                <button class="btn-detail-card" data-bs-toggle="modal" data-bs-target="#productModal2" title="មើលលម្អិត">
+                                    <i class="fa-solid fa-circle-info me-1"></i> លម្អិត
+                                </button>
+                                <button class="btn-add-cart flex-grow-1">
+                                    <i class="fa-solid fa-cart-plus me-1"></i> កន្ត្រក
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="product-card">
+                        <div class="product-thumb-container" data-bs-toggle="modal" data-bs-target="#productModal3" title="ចុចដើម្បីមើលព័ត៌មានលម្អិត">
+                            <button class="wishlist-btn" title="បញ្ចូលក្នុងបញ្ជីចង់បាន" onclick="event.stopPropagation();"><i class="fa-regular fa-heart"></i></button>
+                            <img src="assets/image/prod_silver_bracelet.png" alt="កងដៃប្រាក់ដាំត្បូងគ្រីស្តាល់" class="product-thumb-img">
+                            <button class="quickview-btn" data-bs-toggle="modal" data-bs-target="#productModal3" title="មើលព័ត៌មានលម្អិត">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="product-body">
+                            <div class="product-category">ខ្សែដៃ</div>
+                            <h3 class="product-title">
+                                <a href="javascript:void(0)" class="product-title-link" data-bs-toggle="modal" data-bs-target="#productModal3">កងដៃប្រាក់ដាំត្បូងគ្រីស្តាល់</a>
+                            </h3>
+                            <div class="product-price">$39.99</div>
+                            <div class="d-flex gap-2 mt-auto">
+                                <button class="btn-detail-card" data-bs-toggle="modal" data-bs-target="#productModal3" title="មើលលម្អិត">
+                                    <i class="fa-solid fa-circle-info me-1"></i> លម្អិត
+                                </button>
+                                <button class="btn-add-cart flex-grow-1">
+                                    <i class="fa-solid fa-cart-plus me-1"></i> កន្ត្រក
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="product-card">
+                        <div class="product-thumb-container" data-bs-toggle="modal" data-bs-target="#productModal4" title="ចុចដើម្បីមើលព័ត៌មានលម្អិត">
+                            <span class="product-badge">ប្រណិត</span>
+                            <button class="wishlist-btn" title="បញ្ចូលក្នុងបញ្ជីចង់បាន" onclick="event.stopPropagation();"><i class="fa-regular fa-heart"></i></button>
+                            <img src="assets/image/prod_classic_watch.png" alt="នាឡិកាដៃ Classic Midnight" class="product-thumb-img">
+                            <button class="quickview-btn" data-bs-toggle="modal" data-bs-target="#productModal4" title="មើលព័ត៌មានលម្អិត">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="product-body">
+                            <div class="product-category">នាឡិកាដៃ</div>
+                            <h3 class="product-title">
+                                <a href="javascript:void(0)" class="product-title-link" data-bs-toggle="modal" data-bs-target="#productModal4">នាឡិកាដៃ Classic Midnight</a>
+                            </h3>
+                            <div class="product-price">$129.99</div>
+                            <div class="d-flex gap-2 mt-auto">
+                                <button class="btn-detail-card" data-bs-toggle="modal" data-bs-target="#productModal4" title="មើលលម្អិត">
+                                    <i class="fa-solid fa-circle-info me-1"></i> លម្អិត
+                                </button>
+                                <button class="btn-add-cart flex-grow-1">
+                                    <i class="fa-solid fa-cart-plus me-1"></i> កន្ត្រក
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="special-offer-banner mt-5 p-4 p-md-5">
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-7 text-center text-md-start mb-3 mb-md-0">
+                        <span class="badge bg-light text-dark px-3 py-2 rounded-pill mb-3">ការផ្តល់ជូនពិសេស</span>
+                        <h2 class="display-6 fw-bold mb-2">បញ្ចុះតម្លៃ ២០% សម្រាប់ការបញ្ជាទិញដំបូង</h2>
+                        <p class="text-white-50 mb-4">បំពេញភាពស្រស់ស្អាតរបស់អ្នកជាមួយនឹងគ្រឿងអលង្ការប្រណិតដែលច្នៃដោយដៃពី DLK។</p>
+                        <a href="#shop" class="btn btn-light rounded-pill px-4 py-2 fw-semibold">
+                            ទទួលបានការបញ្ចុះតម្លៃ <i class="fa-solid fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-5 text-center">
+                        <img src="assets/image/special_offer_box.png" alt="ប្រអប់កាដូប្រណិត" class="img-fluid offer-gift-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade product-modal" id="productModal1" tabindex="-1" aria-labelledby="productModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModal1Label">ព័ត៌មានលម្អិតអំពីទំនិញ</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="បិទ"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-md-6">
+                            <div class="modal-img-wrapper position-relative">
+                                <span class="product-badge">លក់ដាច់បំផុត</span>
+                                <img src="assets/image/prod_diamond_necklace.png" alt="ខ្សែកពេជ្រ Clover" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <span class="badge bg-secondary-subtle text-dark mb-2">ខ្សែក</span>
+                            <h3 class="product-title mb-2">ខ្សែកពេជ្រ Four-Leaf Clover</h3>
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <div class="star-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                </div>
+                                <span class="small text-muted">(4.9 / 5 | 128 ការវាយតម្លៃ)</span>
+                            </div>
+                            <div class="modal-product-price mb-3">
+                                $79.99 <span class="old-price text-muted fs-6 text-decoration-line-through ms-2">$99.99</span>
+                                <span class="badge bg-danger ms-2">បញ្ចុះ ២០%</span>
+                            </div>
+                            <p class="small text-muted mb-3">
+                                ខ្សែកពេជ្ររចនាម៉ូដស្លឹកឈើ ៤ ស្រទាប់ (Four-Leaf Clover) តំណាងឱ្យសំណាងល្អ សេចក្តីស្រឡាញ់ និងភាពរុងរឿង។ ច្នៃចេញពីមាសស ១៨K ដាំដោយគ្រាប់ពេជ្រ Zirconia ភ្លឺចែងចាំង មិនងាយហើរពណ៌ និងមានសុវត្ថិភាពសម្រាប់ស្បែក។
+                            </p>
+                            <table class="modal-spec-table">
+                                <tbody>
+                                    <tr>
+                                        <td>សម្ភារៈ៖</td>
+                                        <td>មាសស ១៨K (18K White Gold Plated)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ប្រភេទត្បូង៖</td>
+                                        <td>ពេជ្រ Zirconia គុណភាពខ្ពស់ AAA</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ប្រវែងខ្សែ៖</td>
+                                        <td>40cm + 5cm (អាចសារ៉េបាន)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ការធានា៖</td>
+                                        <td>ធានាគុណភាព ៦ ខែ</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="d-flex align-items-center gap-3 my-3">
+                                <span class="small fw-semibold">ចំនួន៖</span>
+                                <div class="qty-control">
+                                    <button type="button" class="qty-btn" onclick="let input=this.nextElementSibling; if(input.value>1) input.value--;">-</button>
+                                    <input type="text" class="qty-input" value="1" readonly>
+                                    <button type="button" class="qty-btn" onclick="let input=this.previousElementSibling; input.value++;">+</button>
+                                </div>
+                                <span class="small text-success"><i class="fa-solid fa-check-circle me-1"></i>មានក្នុងស្តុក</span>
+                            </div>
+                            <div class="d-flex gap-2 pt-2">
+                                <button type="button" class="btn btn-outline-dark flex-grow-1 py-2">
+                                    <i class="fa-solid fa-cart-plus me-1"></i> បញ្ចូលកន្ត្រក
+                                </button>
+                                <button type="button" class="btn btn-buy-now flex-grow-1 py-2">
+                                    <i class="fa-solid fa-bolt me-1"></i> ទិញឥឡូវនេះ
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade product-modal" id="productModal2" tabindex="-1" aria-labelledby="productModal2Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModal2Label">ព័ត៌មានលម្អិតអំពីទំនិញ</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="បិទ"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-md-6">
+                            <div class="modal-img-wrapper position-relative">
+                                <span class="product-badge">ទំនិញថ្មី</span>
+                                <img src="assets/image/prod_elegant_earrings.png" alt="ក្រវិលគុជខ្យងបូប្រណិត" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <span class="badge bg-secondary-subtle text-dark mb-2">ក្រវិល</span>
+                            <h3 class="product-title mb-2">ក្រវិលគុជខ្យងបូប្រណិត</h3>
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <div class="star-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <span class="small text-muted">(4.8 / 5 | 86 ការវាយតម្លៃ)</span>
+                            </div>
+                            <div class="modal-product-price mb-3">
+                                $49.99
+                            </div>
+                            <p class="small text-muted mb-3">
+                                ក្រវិលរចនាម៉ូដបូគួរឱ្យស្រឡាញ់ រួមផ្សំជាមួយគ្រាប់គុជខ្យងទឹកសាបធម្មជាតិ បង្ហាញពីភាពទន់ភ្លន់ ថ្លៃថ្នូរ និងភាពទាក់ទាញនារីសម័យថ្មី។ ស័ក្តិសមបំផុតសម្រាប់ពិធីជប់លៀង និងការដើរកម្សាន្តប្រចាំថ្ងៃ។
+                            </p>
+                            <table class="modal-spec-table">
+                                <tbody>
+                                    <tr>
+                                        <td>សម្ភារៈ៖</td>
+                                        <td>ប្រាក់សុទ្ធ 925 (Sterling Silver)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ប្រភេទគុជ៖</td>
+                                        <td>គុជខ្យងទឹកសាបធម្មជាតិ (Natural Pearl)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ប្រភេទទំពក់៖</td>
+                                        <td>ប្រាក់សុទ្ធប្រឆាំងអាឡែកហ្ស៊ីស្បែក</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ការធានា៖</td>
+                                        <td>ធានាគុណភាព ៦ ខែ</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="d-flex align-items-center gap-3 my-3">
+                                <span class="small fw-semibold">ចំនួន៖</span>
+                                <div class="qty-control">
+                                    <button type="button" class="qty-btn" onclick="let input=this.nextElementSibling; if(input.value>1) input.value--;">-</button>
+                                    <input type="text" class="qty-input" value="1" readonly>
+                                    <button type="button" class="qty-btn" onclick="let input=this.previousElementSibling; input.value++;">+</button>
+                                </div>
+                                <span class="small text-success"><i class="fa-solid fa-check-circle me-1"></i>មានក្នុងស្តុក</span>
+                            </div>
+                            <div class="d-flex gap-2 pt-2">
+                                <button type="button" class="btn btn-outline-dark flex-grow-1 py-2">
+                                    <i class="fa-solid fa-cart-plus me-1"></i> បញ្ចូលកន្ត្រក
+                                </button>
+                                <button type="button" class="btn btn-buy-now flex-grow-1 py-2">
+                                    <i class="fa-solid fa-bolt me-1"></i> ទិញឥឡូវនេះ
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade product-modal" id="productModal3" tabindex="-1" aria-labelledby="productModal3Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModal3Label">ព័ត៌មានលម្អិតអំពីទំនិញ</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="បិទ"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-md-6">
+                            <div class="modal-img-wrapper position-relative">
+                                <img src="assets/image/prod_silver_bracelet.png" alt="កងដៃប្រាក់ដាំត្បូងគ្រីស្តាល់" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <span class="badge bg-secondary-subtle text-dark mb-2">ខ្សែដៃ</span>
+                            <h3 class="product-title mb-2">កងដៃប្រាក់ដាំត្បូងគ្រីស្តាល់</h3>
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <div class="star-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                </div>
+                                <span class="small text-muted">(4.7 / 5 | 94 ការវាយតម្លៃ)</span>
+                            </div>
+                            <div class="modal-product-price mb-3">
+                                $39.99
+                            </div>
+                            <p class="small text-muted mb-3">
+                                កងដៃប្រាក់រចនាយ៉ាងផ្ចិតផ្ចង់ ដាំគ្រីស្តាល់ភ្លឺផ្លេកជុំវិញ ផ្តល់នូវភាពទាក់ទាញ និងភាពរលោងស្រស់ស្អាតលើកដៃ។ អាចពាក់តែមួយ ឬពាក់တွែជាមួយនាឡិកាដៃដើម្បីបង្កើនភាពទាន់សម័យ។
+                            </p>
+                            <table class="modal-spec-table">
+                                <tbody>
+                                    <tr>
+                                        <td>សម្ភារៈ៖</td>
+                                        <td>ប្រាក់សុទ្ធ 925 ស្រោបប្លាទីន</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ប្រភេទគ្រីស្តាល់៖</td>
+                                        <td>Austrian Crystals កាត់កម្រិតពិសេស</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ទំហំកងដៃ៖</td>
+                                        <td>អង្កត់ផ្ចិត 5.8cm (អាចបត់បែនតម្រូវដៃបាន)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ការធានា៖</td>
+                                        <td>ធានាគុណភាព ៦ ខែ</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="d-flex align-items-center gap-3 my-3">
+                                <span class="small fw-semibold">ចំនួន៖</span>
+                                <div class="qty-control">
+                                    <button type="button" class="qty-btn" onclick="let input=this.nextElementSibling; if(input.value>1) input.value--;">-</button>
+                                    <input type="text" class="qty-input" value="1" readonly>
+                                    <button type="button" class="qty-btn" onclick="let input=this.previousElementSibling; input.value++;">+</button>
+                                </div>
+                                <span class="small text-success"><i class="fa-solid fa-check-circle me-1"></i>មានក្នុងស្តុក</span>
+                            </div>
+                            <div class="d-flex gap-2 pt-2">
+                                <button type="button" class="btn btn-outline-dark flex-grow-1 py-2">
+                                    <i class="fa-solid fa-cart-plus me-1"></i> បញ្ចូលកន្ត្រក
+                                </button>
+                                <button type="button" class="btn btn-buy-now flex-grow-1 py-2">
+                                    <i class="fa-solid fa-bolt me-1"></i> ទិញឥឡូវនេះ
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade product-modal" id="productModal4" tabindex="-1" aria-labelledby="productModal4Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModal4Label">ព័ត៌មានលម្អិតអំពីទំនិញ</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="បិទ"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-md-6">
+                            <div class="modal-img-wrapper position-relative">
+                                <span class="product-badge">ប្រណិត</span>
+                                <img src="assets/image/prod_classic_watch.png" alt="នាឡិកាដៃ Classic Midnight" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <span class="badge bg-secondary-subtle text-dark mb-2">នាឡិកាដៃ</span>
+                            <h3 class="product-title mb-2">នាឡិកាដៃ Classic Midnight</h3>
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <div class="star-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <span class="small text-muted">(5.0 / 5 | 156 ការវាយតម្លៃ)</span>
+                            </div>
+                            <div class="modal-product-price mb-3">
+                                $129.99
+                            </div>
+                            <p class="small text-muted mb-3">
+                                នាឡិកាដៃប្រណិតពណ៌ Midnight Navy រចនាយ៉ាងឥតខ្ចោះ ជាមួយនឹងកញ្ចក់ Sapphire ការពារការឆ្កូត និងប្រព័ន្ធម៉ាស៊ីន Quartz របស់ប្រទេសជប៉ុនដែលដំណើរការយ៉ាងត្រឹមត្រូវបំផុត។ ការពារជម្រាបទឹកកម្រិត 3ATM។
+                            </p>
+                            <table class="modal-spec-table">
+                                <tbody>
+                                    <tr>
+                                        <td>មុខកាត់នាឡិកា៖</td>
+                                        <td>36mm (កម្រាស់ 7.5mm)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>កញ្ចក់មុខ៖</td>
+                                        <td>Sapphire Crystal ការពារឆ្កូត</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ប្រព័ន្ធម៉ាស៊ីន៖</td>
+                                        <td>Japanese Quartz Movement</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ជម្រាបទឹក៖</td>
+                                        <td>3ATM / 30 ម៉ែត្រ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ការធានា៖</td>
+                                        <td>ធានា ១ ឆ្នាំពេញលេញលើម៉ាស៊ីន</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="d-flex align-items-center gap-3 my-3">
+                                <span class="small fw-semibold">ចំនួន៖</span>
+                                <div class="qty-control">
+                                    <button type="button" class="qty-btn" onclick="let input=this.nextElementSibling; if(input.value>1) input.value--;">-</button>
+                                    <input type="text" class="qty-input" value="1" readonly>
+                                    <button type="button" class="qty-btn" onclick="let input=this.previousElementSibling; input.value++;">+</button>
+                                </div>
+                                <span class="small text-success"><i class="fa-solid fa-check-circle me-1"></i>មានក្នុងស្តុក</span>
+                            </div>
+                            <div class="d-flex gap-2 pt-2">
+                                <button type="button" class="btn btn-outline-dark flex-grow-1 py-2">
+                                    <i class="fa-solid fa-cart-plus me-1"></i> បញ្ចូលកន្ត្រក
+                                </button>
+                                <button type="button" class="btn btn-buy-now flex-grow-1 py-2">
+                                    <i class="fa-solid fa-bolt me-1"></i> ទិញឥឡូវនេះ
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="dlk-footer">
+        <div class="container-fluid px-lg-5">
+            <div class="row g-4">
+                <div class="col-12 col-lg-4">
+                    <a class="brand-wrapper mb-3" href="index.html">
+                        <span class="brand-title">DLK<span class="brand-sparkle">✦</span></span>
+                        <span class="brand-subtitle">ACCESSORIES</span>
+                    </a>
+                    <p class="small text-white-50 pe-lg-4 mt-3">
+                        លើសពីគ្រឿងតុបតែង គឺជាស្ទីលនៃការរស់នៅ។ នាំមកជូននូវភាពប្រណិត គុណភាពខ្ពស់ និងភាពទាក់ទាញគ្រប់ពេលវេលា។
+                    </p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="nav-action-btn"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="nav-action-btn"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="nav-action-btn"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#" class="nav-action-btn"><i class="fa-brands fa-pinterest"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h5 class="footer-heading">ទំនិញ</h5>
+                    <ul class="footer-links">
+                        <li><a href="#necklaces">ខ្សែក</a></li>
+                        <li><a href="#earrings">ក្រវិល</a></li>
+                        <li><a href="#rings">ចិញ្ចៀន</a></li>
+                        <li><a href="#bracelets">ខ្សែដៃ</a></li>
+                        <li><a href="#watches">នាឡិកាដៃ</a></li>
+                        <li><a href="#bags">កាបូបប្រណិត</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h5 class="footer-heading">សេវាកម្មអតិថិជន</h5>
+                    <ul class="footer-links">
+                        <li><a href="#shipping">គោលការណ៍ដឹកជញ្ជូន</a></li>
+                        <li><a href="#returns">ការប្តូរ និងសងប្រាក់វិញ</a></li>
+                        <li><a href="#tracking">តាមដានការបញ្ជាទិញ</a></li>
+                        <li><a href="#faq">សំណួរញឹកញាប់</a></li>
+                        <li><a href="#contact">ទាក់ទងមកយើង</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <h5 class="footer-heading">ប្រព័ន្ធគ្រប់គ្រងនិក្ខេបបទ</h5>
+                    <p class="small text-white-50">
+                        ប្រព័ន្ធគ្រប់គ្រងស្តុកទំនិញ ចំណុចលក់តាមសាខា (POS) និងការលក់អនឡាញពេញលេញ។
+                    </p>
+                    <div class="d-flex flex-wrap gap-2 mt-3">
+                        <span class="badge border border-secondary text-light px-3 py-2 rounded-pill small">
+                            <i class="fa-solid fa-globe me-1 text-info"></i> គេហទំព័រលក់ទំនិញ
+                        </span>
+                        <span class="badge border border-secondary text-light px-3 py-2 rounded-pill small">
+                            <i class="fa-solid fa-code-branch me-1 text-warning"></i> គ្រប់គ្រងពហុសាខា
+                        </span>
+                        <span class="badge border border-secondary text-light px-3 py-2 rounded-pill small">
+                            <i class="fa-solid fa-cash-register me-1 text-success"></i> ប្រព័ន្ធ POS
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center text-center text-md-start">
+                <div>
+                    &copy; 2026 DLK ACCESSORIES. រក្សាសិទ្ធិគ្រប់យ៉ាង។
+                </div>
+                <div class="mt-2 mt-md-0">
+                    <span class="text-white-50">ប្រព័ន្ធគ្រប់គ្រងស្តុកទំនិញ និងចំណុចលក់ POS</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="mobile-bottom-nav justify-content-around align-items-center">
+        <a href="index.html" class="mobile-nav-link active">
+            <i class="fa-solid fa-house"></i>
+            <span>ទំព័រដើម</span>
+        </a>
+        <a href="#shop" class="mobile-nav-link">
+            <i class="fa-solid fa-store"></i>
+            <span>ទំនិញ</span>
+        </a>
+        <a href="#cart" class="mobile-nav-link position-relative">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="badge rounded-pill bg-danger cart-badge" style="top:-3px; right:3px;">2</span>
+            <span>កន្ត្រក</span>
+        </a>
+        <a href="#profile" class="mobile-nav-link">
+            <i class="fa-regular fa-user"></i>
+            <span>គណនី</span>
+        </a>
+    </div>
+
+    <script src="assets/css/bootstrap/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
-<!-- BOOTSTRAP JAVA -->
-<script src="assets/css/bootstrap/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
 </html>
